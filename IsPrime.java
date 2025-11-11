@@ -1,20 +1,18 @@
 package week1.day2;
 
-import java.util.Iterator;
-
 public class IsPrime {
 
 	public static void main(String[] args) {
-		int n = 29;
-		boolean isPrime = true;
-		
-		for (int i = 2;i <= n/2; i++) {
-			if (n%i==0) {
-				isPrime = false;
-				break;
+		int n = 16;
+		int count = 0;
+		int rem;
+		for (int i = 1; i <= n; i++) {
+			rem = n%i;
+			if(rem==0) {
+				count++;
 			}
-	}
-		if (isPrime && n>1) {
+		}
+		if (count==2) {
 			System.out.println(n+"is a prime number");
 		}
 		else {
